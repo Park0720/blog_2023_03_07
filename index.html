@@ -103,17 +103,17 @@
       ]
     });
     
-    function showPage(pageNo){
+    function showPage(pageNo) {
       fetch(pageNo + ".md")
-      .then(response) => response.text())
-      .then(text =>{
-        viewer1.setMarkdown(text);
+        .then(response => response.text()) // 응답에서 본문만 취한다.
+        .then(text => {
+          viewer1.setMarkdown(text);
 
-        window.scrollTo({
-          top: 0,
-          behavior : "smooth"
-        });
-      })
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        })
     }
 
   </script>
